@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.idwxy.exindex.dao.UserDao">
+    <select id="getById" parameterType="Integer" resultType="com.idwxy.exindex.entity.User" >
+        select
+        id, name, gender, age, phone, phone, job, address,
+        create_time as createTime
+         from user where id = #{id};
+    </select>
+
+    <select id="getAll" resultType="com.idwxy.exindex.entity.User">
+        select
+        id, name, gender, age, phone, phone, job, address,
+        create_time as createTime
+         from user
+    </select>
+
+    <insert id="insert" parameterType="com.idwxy.exindex.entity.User">
+        update user
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="age != null and age != 0">
+                age = #{age},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="job != null and job != 0">
+                job = #{job},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address}
+            </if>
+        </set>
+        where id = #{id};
+    </insert>
+
+    <delete id="delete" parameterType="Integer">
+        delete from user where id = #{id};
+    </delete>
+</mapper>
