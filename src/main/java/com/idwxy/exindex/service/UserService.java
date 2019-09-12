@@ -3,7 +3,7 @@ package com.idwxy.exindex.service;
 import com.idwxy.exindex.common.PaginationObject;
 import com.idwxy.exindex.entity.User;
 
-public interface insertUser {
+public interface UserService {
 
     /**
      * 创建用户
