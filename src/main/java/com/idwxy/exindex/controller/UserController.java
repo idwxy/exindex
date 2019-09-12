@@ -44,7 +44,7 @@ public class UserController {
     }
 
     // 删除用户
-    @GetMapping("/delete")
+    @DeleteMapping("/delete")
     public ResultObject delete(@RequestParam Integer id) {
         int modifyId = userService.delete(id);
         Map<String, Integer> map = new HashMap<>();
