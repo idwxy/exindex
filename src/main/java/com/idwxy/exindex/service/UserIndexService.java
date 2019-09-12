@@ -28,9 +28,9 @@ public interface UserIndexService {
     int updateUserIndex(UserIndex userIndex);
 
     /**
-     * 删除用户生理指标数据
-     * @param userIndex
+     * 通过 id 删除用户生理指标数据
+     * @param userIndexId
      * @return
      */
-    int delete(Integer userIndex);
+    int delete(Integer userIndexId);
 }
