@@ -28,6 +28,38 @@ public class UserRelationship {
         this.userIndexs = userIndexs;
     }
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public List<EnergyDate> getFoodEnergies() {
+        return foodEnergies;
+    }
+
+    public void setFoodEnergies(List<EnergyDate> foodEnergies) {
+        this.foodEnergies = foodEnergies;
+    }
+
+    public List<EnergyDate> getSportEnergies() {
+        return sportEnergies;
+    }
+
+    public void setSportEnergies(List<EnergyDate> sportEnergies) {
+        this.sportEnergies = sportEnergies;
+    }
+
+    public Map<Integer, List<UserIndex>> getUserIndexs() {
+        return userIndexs;
+    }
+
+    public void setUserIndexs(Map<Integer, List<UserIndex>> userIndexs) {
+        this.userIndexs = userIndexs;
+    }
+
     @Override
     public String toString() {
         return "UserRelationship [userId=" + userId +
