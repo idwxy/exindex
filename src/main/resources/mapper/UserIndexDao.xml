@@ -5,9 +5,10 @@
     <select id="getId" parameterType="com.idwxy.exindex.entity.UserIndex"
     resultType="com.idwxy.exindex.entity.UserIndex">
         select id,
+        index_type as indexType,
         index_content as indexContent,
         collect_date as collectDate
-        from user_index where user_id = #{userId} and index_type = #{indexType};
+         from user_index where user_id = #{userId};
     </select>
 
     <insert id="insert" parameterType="com.idwxy.exindex.entity.UserIndex">
