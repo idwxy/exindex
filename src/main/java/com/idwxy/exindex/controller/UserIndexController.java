@@ -30,7 +30,7 @@ public class UserIndexController {
     // 通过 user ID、类型查询用户生理指标值
     @GetMapping("/get")
     public ResultObject getUserIndexById(@RequestBody UserIndex userIndex) {
-        List<UserIndex> userIndexIndexs = userIndexService.getUserIndexById(userIndex);
+        List<UserIndex> userIndexIndexs = userIndexService.getUserIndexById(userIndex.getUserId());
         ResultObject resultObject = new ResultObject(200, "", userIndexIndexs);
         return resultObject;
     }
