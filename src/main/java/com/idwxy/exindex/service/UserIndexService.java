@@ -11,7 +11,7 @@ public interface UserIndexService {
      * @param userIndex
      * @return
      */
-    List<UserIndex> getUserIndexById(UserIndex userIndex);
+    List<UserIndex> getUserIndexById(Integer userId);
 
     /**
      * 创建用户生理指标数据

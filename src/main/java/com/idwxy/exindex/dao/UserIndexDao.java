@@ -8,10 +8,10 @@ public interface UserIndexDao {
 
     /**
      * 通过用户 id 和指标类型获取用户的所有指标
-     * @param userIndex
+     * @param userId
      * @return
      */
-    List<UserIndex> getById(UserIndex userIndex);
+    List<UserIndex> getById(Integer userId);
 
     /**
      * 创建用户生理指标数据

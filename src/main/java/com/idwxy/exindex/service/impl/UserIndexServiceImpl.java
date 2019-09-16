@@ -16,8 +16,8 @@ public class UserIndexServiceImpl implements UserIndexService {
     private UserIndexDao userIndexDao;
 
     @Override
-    public List<UserIndex> getUserIndexById(UserIndex userIndex) {
-        List<UserIndex> userIndices = userIndexDao.getById(userIndex);
+    public List<UserIndex> getUserIndexById(Integer userId) {
+        List<UserIndex> userIndices = userIndexDao.getById(userId);
         return userIndices;
     }
 
