@@ -3,7 +3,7 @@ package com.idwxy.exindex.common;
 public class ResultObject {
 
     // 返回状态码
-    private Integer codoe;
+    private Integer code;
 
     // 相关信息
     private String msg;
@@ -18,17 +18,17 @@ public class ResultObject {
 
     public ResultObject(Integer code, String msg, Object result) {
         super();
-        this.codoe = code;
+        this.code = code;
         this.msg = msg;
         this.result = result;
     }
 
-    public Integer getCodoe() {
-        return codoe;
+    public Integer getCode() {
+        return code;
     }
 
-    public void setCodoe(Integer codoe) {
-        this.codoe = codoe;
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     public String getMsg() {
@@ -50,7 +50,7 @@ public class ResultObject {
     // 重写 toString 方法
     @Override
     public String toString() {
-        return "ResultObject [code=" + codoe +
+        return "ResultObject [code=" + code +
                 ",msg=" + msg +
                 ",result=" + result + "]";
     }
