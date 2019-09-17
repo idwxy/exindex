@@ -19,7 +19,7 @@ public class FoodController {
 
     // 查询食物
     @GetMapping("/get")
-    public ResultObject getFoodById(@RequestBody Integer id) {
+    public ResultObject getFoodById(@RequestParam Integer id) {
         Food food = foodService.getFoodById(id);
         ResultObject resultObject = new ResultObject(200, "success", food);
         return resultObject;
